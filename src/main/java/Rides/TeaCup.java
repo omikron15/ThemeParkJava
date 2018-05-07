@@ -1,4 +1,5 @@
 package Rides;
+import Person.Person;
 
 public class TeaCup extends Ride{
 
@@ -6,8 +7,11 @@ public class TeaCup extends Ride{
         super(name, price, minHeight);
     }
 
-    public String ride(){
-        return "TeaCup Ride";
+    public String ride(Person person){
+        if (hasEnoughMoney(person) & isTallEnough(person)) {
+            return person.getName() + " is on the TeaCup ride";
+        }
+        return null;
     }
 
 }

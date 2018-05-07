@@ -1,6 +1,7 @@
 import Rides.TeaCup;
 import org.junit.Before;
 import org.junit.Test;
+import Person.Person;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -8,10 +9,12 @@ import static org.junit.Assert.assertTrue;
 public class TeaCupTest {
 
     TeaCup teaCup;
+    Person person1;
 
     @Before
     public void before(){
         teaCup = new TeaCup("TeaCup Ride 1", 5.00, 130);
+        person1 = new Person("Person 1", 20, 150, 50.50);
     }
 
     @Test
@@ -49,6 +52,6 @@ public class TeaCupTest {
 
     @Test
     public void ride(){
-        assertEquals("TeaCup Ride", teaCup.ride());
+        assertEquals("Person 1 is on the TeaCup ride", teaCup.ride(person1));
     }
 }

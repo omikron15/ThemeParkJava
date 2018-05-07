@@ -2,16 +2,19 @@ import Rides.Dodgems;
 import Rides.TeaCup;
 import org.junit.Before;
 import org.junit.Test;
+import Person.Person;
 
 import static org.junit.Assert.assertEquals;
 
 public class DodgemsTest {
 
     Dodgems dodgems;
+    Person person1;
 
     @Before
     public void before(){
         dodgems = new Dodgems("Dodgems 1", 4.50, 140);
+        person1 = new Person("Person 1", 20, 150, 50.50);
     }
 
     @Test
@@ -49,6 +52,6 @@ public class DodgemsTest {
 
     @Test
     public void ride(){
-        assertEquals("Dodgems ride", dodgems.ride());
+        assertEquals("Person 1 is on the Dodgems ride", dodgems.ride(person1));
     }
 }

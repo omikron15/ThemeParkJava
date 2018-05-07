@@ -1,3 +1,5 @@
+package Person;
+
 public class Person {
 
     private String name;
@@ -31,4 +33,10 @@ public class Person {
     public void setMoney(double money) {
         this.money = money;
     }
+
+    public void pay(double money){
+//        if statement for checking money already in ride logic. unsure if this is bad
+        this.money -= money;
+    }
+
 }

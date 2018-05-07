@@ -1,5 +1,7 @@
 package Rides;
 
+import Person.Person;
+
 public abstract class Ride implements IRide {
 
     private String name;
@@ -35,4 +37,13 @@ public abstract class Ride implements IRide {
     public void setMinHeight(int minHeight) {
         this.minHeight = minHeight;
     }
+
+    public boolean isTallEnough(Person person){
+        return (person.getHeight() >= minHeight);
+    }
+
+    public boolean hasEnoughMoney(Person person){
+        return (person.getMoney() >= price);
+    }
+
 }
