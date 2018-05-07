@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class PersonTest {
 
     Person person1;
@@ -37,7 +39,7 @@ public class PersonTest {
     @Test
     public void setMoney(){
         person1.setMoney(100.50);
-        assertEquals(100.50, person1.getMoney());
+        assertEquals(100.50, person1.getMoney(), 0.10);
     }
 
 

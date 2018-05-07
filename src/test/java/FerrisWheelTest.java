@@ -3,13 +3,15 @@ import Rides.TeaCup;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class FerrisWheelTest {
 
     FerrisWheel ferrisWheel;
 
     @Before
     public void before(){
-        ferrisWheel = new TeaCup("Ferris Wheel 1", 8.00, 135);
+        ferrisWheel = new FerrisWheel("Ferris Wheel 1", 8.00, 135);
     }
 
     @Test
@@ -24,7 +26,7 @@ public class FerrisWheelTest {
 
     @Test
     public void getHeight() {
-        assertEquals(135, ferrisWheel.getMinHeight);
+        assertEquals(135, ferrisWheel.getMinHeight());
     }
 
     @Test
@@ -42,6 +44,11 @@ public class FerrisWheelTest {
     @Test
     public void setMinHeight(){
         ferrisWheel.setMinHeight(140);
-        aassertEquals(140, ferrisWheel.getMinHeight);
+        assertEquals(140, ferrisWheel.getMinHeight());
+    }
+
+    @Test
+    public void ride(){
+        assertEquals("FerrisWheel ride", ferrisWheel.ride());
     }
 }

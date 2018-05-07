@@ -2,13 +2,16 @@ import Rides.TeaCup;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class TeaCupTest {
 
     TeaCup teaCup;
 
     @Before
     public void before(){
-        teaCup = new TeaCup("TeaCup Ride 1", 5.00, 10,  130);
+        teaCup = new TeaCup("TeaCup Ride 1", 5.00, 130);
     }
 
     @Test
@@ -23,13 +26,13 @@ public class TeaCupTest {
 
     @Test
     public void getHeight() {
-        assertEquals(130, teaCup.getMinHeight);
+        assertEquals(130, teaCup.getMinHeight());
     }
 
     @Test
     public void setName() {
         teaCup.setName("TeaCup Ride 2");
-        assertEquals("TeaCup Ride 1", teaCup.getName());
+        assertEquals("TeaCup Ride 2", teaCup.getName());
     }
 
     @Test
@@ -41,6 +44,11 @@ public class TeaCupTest {
     @Test
     public void setMinHeight(){
         teaCup.setMinHeight(140);
-        aassertEquals(140, teaCup.getMinHeight);
+        assertEquals(140, teaCup.getMinHeight());
+    }
+
+    @Test
+    public void ride(){
+        assertEquals("TeaCup Ride", teaCup.ride());
     }
 }

@@ -3,13 +3,15 @@ import Rides.TeaCup;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class DodgemsTest {
 
     Dodgems dodgems;
 
     @Before
     public void before(){
-        dodgems = new TeaCup("Dodgems 1", 4.50, 140);
+        dodgems = new Dodgems("Dodgems 1", 4.50, 140);
     }
 
     @Test
@@ -24,7 +26,7 @@ public class DodgemsTest {
 
     @Test
     public void getHeight() {
-        assertEquals(140, dodgems.getMinHeight);
+        assertEquals(140, dodgems.getMinHeight());
     }
 
     @Test
@@ -42,6 +44,11 @@ public class DodgemsTest {
     @Test
     public void setMinHeight(){
         dodgems.setMinHeight(145);
-        aassertEquals(145, dodgems.getMinHeight);
+        assertEquals(145, dodgems.getMinHeight());
+    }
+
+    @Test
+    public void ride(){
+        assertEquals("Dodgems ride", dodgems.ride());
     }
 }
