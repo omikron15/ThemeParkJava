@@ -1,3 +1,4 @@
+import Rides.TeaCup;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -38,7 +39,7 @@ public class TeaCupTest {
     }
 
     @Test
-    public void () setMinHeight(){
+    public void setMinHeight(){
         teaCup.setMinHeight(140);
         aassertEquals(140, teaCup.getMinHeight);
     }

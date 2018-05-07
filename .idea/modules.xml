@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ThemeParkJava.iml" filepath="$PROJECT_DIR$/.idea/modules/ThemeParkJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ThemeParkJava_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ThemeParkJava_main.iml" group="ThemeParkJava" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ThemeParkJava_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ThemeParkJava_test.iml" group="ThemeParkJava" />
     </modules>
   </component>
 </project>
